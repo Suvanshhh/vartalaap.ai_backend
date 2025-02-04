@@ -174,7 +174,7 @@ def end_chat():
 # Use Waitress to serve the app in production
 if __name__ == "__main__":
     try:
-        port = int(os.environ.get("PORT", 8080))  # Render uses port 8080
+        port = int(os.environ.get("PORT", 8080))  # Vercel uses port 8080 by default
         print(f"Starting Flask server on port {port}...")
         serve(app, host='0.0.0.0', port=port)
     except Exception as e:
